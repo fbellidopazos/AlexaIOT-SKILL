@@ -1,11 +1,6 @@
 # Alexa OITPI
 
 ## Raspberry Pi - Installation
-
-
-
-
-
 ### Main Hub
 1. Clone repository
 2. CD to project folder
@@ -26,14 +21,16 @@
 2. In Config.txt add devices example:
 ```
 <Write How>
-
 ```
-
 ### Once Evertything configured
 In Main Hub
 1. Cd to project folder
 2. sh Start.sh
 3. Make  the Alexa App....
+
+
+
+
 
 ## Contents
 ### Alexa Skill
