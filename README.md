@@ -38,7 +38,7 @@ if(40.6387>=float(info[1])>=40.637 and -3.571>=float(info[2])>=-3.573):
       else:
           info[1]=RGC.reverseGEO(info[1],info[2])
       break
-      
+
 ```
 ### Once Evertything configured
 In Main Hub
@@ -62,6 +62,7 @@ In Main Hub
 2. Remote Doorbell
 
 ### Remote Doorbell
+In progress
 
 ##Credits
 ### Not my stuff:
