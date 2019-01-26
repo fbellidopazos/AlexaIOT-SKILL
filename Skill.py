@@ -6,7 +6,7 @@ import os
 import ast
 import time
 import life360App
-
+import modules.ReverseGeoCoder as RGC
 
 #Notes:
 #=========================
@@ -33,7 +33,7 @@ devices={
 apodos={
 "Fernando":["fair","ferny"],
 "Efebeac":["dad","fernando","efebeac"],
-"Maria":["mom","maría","maria"],
+"Maria":["mom","maria","maria"],
 "IgnacioBP":["nene","ignacioBP"]
 }
 
@@ -62,19 +62,20 @@ def help():
     return question(render_template("help"))
 
 
-#Intents
-@ask.intent('HelloIntent')
-def hello():
-    hellos=["Hi there","Howdy","May the force be with you","Greetings","Hello World!"]
-    return statement(random.choice(hellos))
+
 
 
 '''
 Intents:
 =====================================================================================
-1.-life360
-2.-Turn On/Off
+1.-Hellos
+2.-life360
+3.-Turn On/Off---Not Done
 '''
+@ask.intent('HelloIntent')
+def hello():
+    hellos=["Hi there","Howdy","May the force be with you","Greetings","Hello World!"]
+    return statement(random.choice(hellos))
 
 #life360 Family Location
 @ask.intent('LocateIntent')
@@ -94,12 +95,13 @@ def life360(Shortname):
             elif(40.6288>=float(info[1])>=40.6277 and -3.584>=float(info[2])>=-3.5821):
                 info[1]="Having A relaxing Cup of Cafe Con Leche at Santo Domingo" #Xarelo/MiaNona etc...
             else:
-                info[1]="'Somewhere I dont Know'"
+                info[1]=RGC.reverseGEO(info[1],info[2])
             break
     return statement(Shortname+" "+"is "+info[1]+" With a battery of " + info[3])
 
 
-#Needed
+'''MANDATORY'''
 if __name__ == '__main__':
-    os.open("")
+    #os.system("gnome-terminal -x python AlexaIOT0.py")
+    #os.system("python AlexaIOT0.py")
     app.run(debug=True)
