@@ -1,7 +1,7 @@
 # Alexa Internet of Things
 
 ## Raspberry Pi - Installation
-```
+
 ### Raspian
 
 
@@ -13,6 +13,7 @@
 4.- sh Install.sh
 5.- In raspi-config enable RemoteGPIO
 6.-(Optional) Enable VNC and SSH , for better control when operating and troubleshooting
+7.- The installation will reboot Raspberry, save everything before
 
 ##### Remotes
 1.-(Optional) Install Raspian Lite(Less Space) or Raspian Full
@@ -25,4 +26,3 @@ In Main Hub
 1.- Cd to project folder
 2.- sh Start.sh
 3.- Make  the Alexa App....
-```
