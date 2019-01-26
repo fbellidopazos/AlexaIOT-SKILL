@@ -20,7 +20,14 @@
 1. Install Relay in Remotes(You do this part)
 2. In Config.txt add devices example:
 ```
-<Write How>
+[
+    ['<Name>', gpio_handler("<Remote PIN>","<IP>")],
+
+    ['Yellow LED',gpio_handler("<Remote PIN>","<IP>")],
+
+    ['Blue LED',gpio_handler("<Remote PIN>","<IP>")]
+]
+
 ```
 ### As Family
 1. Install Life360

@@ -21,14 +21,8 @@ import modules.ReverseGeoCoder as RGC
 #Type 1 -> Curtains,...
 #Type 2 ->
 
-'''
-devices={
-"White LED"=[PIN,IP,TYPE,GROUP],
-"Green LED"=[PIN,IP,TYPE,GROUP],
-"Yellow LED"=[PIN,IP,TYPE,GROUP],
-"Curtains"=[PIN,IP,TYPE,GROUP]
-}
-'''
+with open('Config.txt', 'r') as f:
+    Devices = ast.literal_eval(f.read())
 
 apodos={
 "Fernando":["fair","ferny"],
