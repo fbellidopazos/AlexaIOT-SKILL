@@ -22,6 +22,24 @@
 ```
 <Write How>
 ```
+### As Family
+1. Install Life360
+2. Put one user in life360App(Username and Password)
+3. Work the Coordinates out(Inside Skill.py -- See Example)
+```
+EXAMPLE
+
+if(40.6387>=float(info[1])>=40.637 and -3.571>=float(info[2])>=-3.573):
+          info[1]="Home" #CASA
+      elif(40.631>=float(info[1])>=40.6285 and -3.584>=float(info[2])>=-3.5839):
+          info[1]="Buying groceries" #En La compra
+      elif(40.6288>=float(info[1])>=40.6277 and -3.584>=float(info[2])>=-3.5821):
+          info[1]="Having A relaxing Cup of Cafe Con Leche at Santo Domingo" #Xarelo/MiaNona etc...
+      else:
+          info[1]=RGC.reverseGEO(info[1],info[2])
+      break
+      
+```
 ### Once Evertything configured
 In Main Hub
 1. Cd to project folder
@@ -44,3 +62,9 @@ In Main Hub
 2. Remote Doorbell
 
 ### Remote Doorbell
+
+##Credits
+### Not my stuff:
+Thanks to
+1. https://github.com/harperreed/life360-python --> Life360
+2. https://geopy.readthedocs.io/en/stable/ -->
