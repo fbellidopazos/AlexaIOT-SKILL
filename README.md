@@ -68,4 +68,4 @@ In progress
 ### Not my stuff:
 Thanks to
 1. https://github.com/harperreed/life360-python --> Life360
-2. https://geopy.readthedocs.io/en/stable/ -->
+2. https://geopy.readthedocs.io/en/stable/ --> GeoPy
