@@ -1,4 +1,4 @@
-# Alexa Internet of Things
+# Alexa OITPI
 
 ## Raspberry Pi - Installation
 
@@ -21,8 +21,29 @@
 3. (Obvious) Configure Network
 4. (Optional) Put Static IP
 
+### Lights/Switches
+1. Install Relay in Remotes(You do this part)
+2. In Config.txt add devices example:
+```
+<Write How>
+
+```
+
 ### Once Evertything configured
 In Main Hub
 1. Cd to project folder
 2. sh Start.sh
 3. Make  the Alexa App....
+
+## Contents
+### Alexa Skill
+1. Hellos
+2. life360
+3. Turn On/Off---Not Done
+4.
+
+### Lights/Switches
+1. Emulation WeMo Devices lights and Switcher
+2. Remote Doorbell
+
+### Remote Doorbell
