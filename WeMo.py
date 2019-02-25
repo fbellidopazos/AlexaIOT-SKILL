@@ -37,8 +37,8 @@ import urllib
 import uuid
 from gpiozero import LED
 from gpiozero.pins.pigpio import PiGPIOFactory
-import ast
-
+#import ast
+import numpy
 # This XML is the minimum needed to define one of our virtual switches
 # to the Amazon Echo
 
@@ -400,8 +400,7 @@ class gpio_handler(object):
 # 16 switches it can control. Only the first 16 elements of the FAUXMOS
 # list will be used.
 
-with open('Config.txt', 'r') as f:
-    FAUXMOS = ast.literal_eval(f.read())
+
 
 ''' FAUXMOS = [
     ['Green LED', gpio_handler(4,"192.168.1.59")],
