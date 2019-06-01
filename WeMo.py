@@ -61,7 +61,7 @@ DEBUG = False
 def dbg(msg):
     global DEBUG
     if DEBUG:
-        print msg
+        print (msg)
         sys.stdout.flush()
 
 
@@ -301,19 +301,24 @@ class upnp_broadcast_responder(object):
 
             try:
                 self.ssock.bind(('',self.port))
-            except Exception, e:
+            except Exception as e:
                 dbg("WARNING: Failed to bind %s:%d: %s" , (self.ip,self.port,e))
                 ok = False
 
             try:
                 self.ssock.setsockopt(socket.IPPROTO_IP,socket.IP_ADD_MEMBERSHIP,self.mreq)
-            except Exception, e:
+            except Exception as e:
                 dbg('WARNING: Failed to join multicast group:',e)
                 ok = False
 
-        except Exception, e:
+        except Exception as e:
             dbg("Failed to initialize UPnP sockets:",e)
             return False
+        '''
+               except Exception, e:
+                       dbg(e)
+                       break
+        '''
         if ok:
             dbg("Listening for UPnP broadcasts")
 
@@ -344,9 +349,14 @@ class upnp_broadcast_responder(object):
                 return self.ssock.recvfrom(size)
             else:
                 return False, False
-        except Exception, e:
+        except Exception as e:
             dbg(e)
             return False, False
+        '''
+               except Exception, e:
+                       dbg(e)
+                       break
+        '''
 
     def add_device(self, device):
         self.devices.append(device)
@@ -400,13 +410,17 @@ class gpio_handler(object):
 # 16 switches it can control. Only the first 16 elements of the FAUXMOS
 # list will be used.
 
-
-
-''' FAUXMOS = [
+# TODO
+'''
+- Añadir dispositivos en Array [NOMBRE,gpio_handler(pin,ip)]
+- Guardar dispositivos en algun lado
+FAUXMOS = [
     ['Green LED', gpio_handler(4,"192.168.1.59")],
     ['Yellow LED',gpio_handler(17,"192.168.1.39")],
     ['Blue LED',gpio_handler(17,"192.168.1.39")]
-] '''
+    
+]'''
+
 
 
 if len(sys.argv) > 1 and sys.argv[1] == '-d':
@@ -437,6 +451,12 @@ while True:
         # Allow time for a ctrl-c to stop the process
         p.poll(100)
         time.sleep(0.1)
-    except Exception, e:
+
+    except Exception as e:
         dbg(e)
         break
+        """
+               except Exception, e:
+                       dbg(e)
+                       break
+        """

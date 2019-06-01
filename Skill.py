@@ -79,19 +79,9 @@ def life360(Shortname):
 #Find if a shortname is in the name then gets the key to which it takes the data and stores it in Info
     for i in apodos:
         if(Shortname.lower() in apodos[i]):
-            info=dict[i]
-
-    #Make GPS regions in order to say where someone is at
-            if(40.6387>=float(info[1])>=40.637 and -3.571>=float(info[2])>=-3.573):
-                info[1]="Home" #CASA
-            elif(40.631>=float(info[1])>=40.6285 and -3.584>=float(info[2])>=-3.5839):
-                info[1]="Buying groceries" #En La compra
-            elif(40.6288>=float(info[1])>=40.6277 and -3.584>=float(info[2])>=-3.5821):
-                info[1]="Having A relaxing Cup of Cafe Con Leche at Santo Domingo" #Xarelo/MiaNona etc...
-            else:
-                info[1]=RGC.reverseGEO(info[1],info[2])
+            info = dict[i]
             break
-    return statement(Shortname+" "+"is "+info[1]+" With a battery of " + info[3])
+    return statement(Shortname+" is at "+ info[0] if info[0]!="" else RGC.reverseGEO(info[1],info[2]) +" With a battery of " + info[3])
 
 
 '''MANDATORY'''

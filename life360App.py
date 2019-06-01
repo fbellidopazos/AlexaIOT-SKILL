@@ -14,8 +14,8 @@ def locate():
     authorization_token = "cFJFcXVnYWJSZXRyZTRFc3RldGhlcnVmcmVQdW1hbUV4dWNyRUh1YzptM2ZydXBSZXRSZXN3ZXJFQ2hBUHJFOTZxYWtFZHI0Vg=="
 
     # your username and password (hope they are secure!)
-    username = ""
-    password = ""
+    username = "fbellidopazos@gmail.com"
+    password = "1123Fbellidopazos"
 
     #instantiate the API
     api = life360(authorization_token="cFJFcXVnYWJSZXRyZTRFc3RldGhlcnVmcmVQdW1hbUV4dWNyRUh1YzptM2ZydXBSZXRSZXN3ZXJFQ2hBUHJFOTZxYWtFZHI0Vg==", username="fbellidopazos@gmail.com", password="1123Fbellidopazos")
@@ -43,4 +43,4 @@ def locate():
     '''f = open("locationInfo.txt","w")
     f.write( str(Data) )
     f.close()'''
-    return(Data )
+    return(Data)
