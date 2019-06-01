@@ -14,11 +14,11 @@ def locate():
     authorization_token = "cFJFcXVnYWJSZXRyZTRFc3RldGhlcnVmcmVQdW1hbUV4dWNyRUh1YzptM2ZydXBSZXRSZXN3ZXJFQ2hBUHJFOTZxYWtFZHI0Vg=="
 
     # your username and password (hope they are secure!)
-    username = "fbellidopazos@gmail.com"
-    password = "1123Fbellidopazos"
+    username = ""
+    password = ""
 
     #instantiate the API
-    api = life360(authorization_token="cFJFcXVnYWJSZXRyZTRFc3RldGhlcnVmcmVQdW1hbUV4dWNyRUh1YzptM2ZydXBSZXRSZXN3ZXJFQ2hBUHJFOTZxYWtFZHI0Vg==", username="fbellidopazos@gmail.com", password="1123Fbellidopazos")
+    api = life360(authorization_token="cFJFcXVnYWJSZXRyZTRFc3RldGhlcnVmcmVQdW1hbUV4dWNyRUh1YzptM2ZydXBSZXRSZXN3ZXJFQ2hBUHJFOTZxYWtFZHI0Vg==", username="", password="")
     if api.authenticate():
         Data={}
 
