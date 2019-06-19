@@ -414,12 +414,13 @@ class gpio_handler(object):
 '''
 - Añadir dispositivos en Array [NOMBRE,gpio_handler(pin,ip)]
 - Guardar dispositivos en algun lado
+'''
 FAUXMOS = [
     ['Green LED', gpio_handler(4,"192.168.1.59")],
     ['Yellow LED',gpio_handler(17,"192.168.1.39")],
     ['Blue LED',gpio_handler(17,"192.168.1.39")]
     
-]'''
+]
 
 
 

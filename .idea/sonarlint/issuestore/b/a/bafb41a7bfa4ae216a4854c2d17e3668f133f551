@@ -1,0 +1,15 @@
+
+hpython:S107€"KMethod "__init__" has 9 parameters, which is greater than the 7 authorized.(’Υθ¶ϊÿÿÿÿ
+Dpython:S1313w",Make this IP "8.8.8.8" address configurable.(Ύύμ
+Kpython:S1313z".Make this IP "127.0.0.1" address configurable.(•Ζ²θύÿÿÿÿ
+Rpython:S1313£"4Make this IP "239.255.255.250" address configurable.(Ά«µƒϋÿÿÿÿ
+fpython:S100ο"IRename method "on" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ΓΫµύÿÿÿÿ
+fpython:S100ύ"IRename method "on" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ΓΫµύÿÿÿÿ
+gpython:S101F"KRename class "poller" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(·¬δ‰ύÿÿÿÿ
+gpython:S101o"PRename class "upnp_device" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(ΩΚά‘
+hpython:S101Ζ"KRename class "fauxmo" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(Ξ—ÿώÿÿÿÿ
+upython:S101›"]Rename class "upnp_broadcast_responder" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(ΘπΏ€
+lpython:S101κ"URename class "rest_api_handler" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(ήΎ…I
+ipython:S101χ"QRename class "gpio_handler" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(ΫΘαν
+-python:S1700J"Rename field "poller"(‚‡“
+Xpython:PrintStatementUsage?"-Replace print statement by built-in function.(Ί¶Η—ωÿÿÿÿ

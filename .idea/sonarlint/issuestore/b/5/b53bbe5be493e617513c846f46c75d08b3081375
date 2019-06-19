@@ -1,0 +1,4 @@
+
+hpython:S1542"KRename function "on" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÜÜî…ùÿÿÿÿ
+kpython:S1542"NRename function "cDown" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(€©¯Éùÿÿÿÿ
+ipython:S1542"LRename function "cUp" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(¹Ñ•ìúÿÿÿÿ
