@@ -1,3 +1,4 @@
 
-qpython:S117L"URename this parameter "Shortname" to match the regular expression ^[_a-z][a-z0-9_]*$.(æ”ÊÞûÿÿÿÿ
 6python:S125Y"Remove this commented out code.(öÆ›ß
+qpython:S117L"URename this parameter "Shortname" to match the regular expression ^[_a-z][a-z0-9_]*$.(æ”ÊÞûÿÿÿÿ
+=python:S125"Remove this commented out code.(ÃÓôÅ8Ëèú›·-

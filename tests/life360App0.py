@@ -44,4 +44,20 @@ def locate():
     f.write( str(Data) )
     f.close()
     return(Data )
-locate()
+# print(locate())
+
+
+apodos={
+"Fernando":["fair","ferny"],
+"Efebeac":["dad","fernando","efebeac"],
+"Maria":["mom","maría","maria"],
+"IgnacioBP":["nene","ignacioBP"]
+}
+shortname="Fair"
+dict=locate()
+info=["Null","Someone not in the database","Null","-100%","Null"]
+for i in apodos:
+    if(shortname.lower() in apodos[i]):
+        info=dict[i]
+        break
+print(info)

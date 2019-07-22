@@ -1,19 +1,21 @@
 
-upython:S101œ"]Rename class "upnp_broadcast_responder" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(Èğ¿€
-hpython:S107"KMethod "__init__" has 9 parameters, which is greater than the 7 authorized.(’Õè¶úÿÿÿÿ
-Rpython:S1313¤"4Make this IP "239.255.255.250" address configurable.(¢«µƒûÿÿÿÿ
-fpython:S100‰"IRename method "on" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÃÛµıÿÿÿÿ
-lpython:S101õ"URename class "rest_api_handler" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(Ş¾…I
--python:S1700K"Rename field "poller"(‚‡œ“
-;python:S125("Remove this commented out code.(¿Öêıÿÿÿÿ
-Hpython:S1763Ê"#Remove the code after this "break".(²²ÒĞûÿÿÿÿ8§Ã˜›±-
 Kpython:S1313{".Make this IP "127.0.0.1" address configurable.(•Æ²èıÿÿÿÿ
-fpython:S100ú"IRename method "on" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÃÛµıÿÿÿÿ
+Rpython:S1313—"2Make this IP "192.168.1.153" address configurable.(™úÃ…8µàï›·-
+fpython:S100ÿ"IRename method "on" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÃÛµıÿÿÿÿ
+lpython:S101ë"URename class "rest_api_handler" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(Ş¾…I
+-python:S1700K"Rename field "poller"(‚‡œ“
+Wpython:S1313˜"2Make this IP "192.168.1.153" address configurable.(Ê¸°ñøÿÿÿÿ8µàï›·-
+fpython:S100ğ"IRename method "on" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÃÛµıÿÿÿÿ
+Wpython:S1313–"2Make this IP "192.168.1.153" address configurable.(ƒ›ó‹ùÿÿÿÿ8µàï›·-
+Cpython:S125’"Remove this commented out code.(½Ö‹ğÿÿÿÿÿ8µàï›·-
+hpython:S107"KMethod "__init__" has 9 parameters, which is greater than the 7 authorized.(’Õè¶úÿÿÿÿ
+;python:S125("Remove this commented out code.(¿Öêıÿÿÿÿ
+Rpython:S1313¤"4Make this IP "239.255.255.250" address configurable.(¢«µƒûÿÿÿÿ
+Wpython:S1313™"2Make this IP "192.168.1.153" address configurable.(†·¸ıüÿÿÿÿ8µàï›·-
+hpython:S101Ç"KRename class "fauxmo" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(Îš—ÿşÿÿÿÿ
+upython:S101œ"]Rename class "upnp_broadcast_responder" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(Èğ¿€
+Dpython:S1313x",Make this IP "8.8.8.8" address configurable.(¾ıì
+ipython:S101ø"QRename class "gpio_handler" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(ÛÈáí
+_python:PrintStatementUsage@"-Replace print statement by built-in function.(º¶Ç—ùÿÿÿÿ8µàï›·-
 gpython:S101G"KRename class "poller" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(·¬ä‰ıÿÿÿÿ
 gpython:S101p"PRename class "upnp_device" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(ÙÊÜ‘
-hpython:S101Ç"KRename class "fauxmo" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(Îš—ÿşÿÿÿÿ
-Dpython:S1313x",Make this IP "8.8.8.8" address configurable.(¾ıì
-ipython:S101‚"QRename class "gpio_handler" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(ÛÈáí
-Vpython:S1313£"1Make this IP "192.168.1.59" address configurable.(¯ñ†õşÿÿÿÿ8ââÉ¸±-
-Vpython:S1313¤"1Make this IP "192.168.1.39" address configurable.(„İø¨øÿÿÿÿ8ââÉ¸±-
-Vpython:S1313¥"1Make this IP "192.168.1.39" address configurable.(ô¿¶ìøÿÿÿÿ8ââÉ¸±-

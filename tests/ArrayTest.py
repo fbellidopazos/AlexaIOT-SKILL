@@ -8,5 +8,6 @@ apodos={
 shortname="Fair"
 for i in apodos:
     if(shortname.lower() in apodos[i]):
-        print(True)
+        print(i)
+
     break

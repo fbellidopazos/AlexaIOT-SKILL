@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b9fdaf2-30aa-4cb9-97ee-fa6f4ac74786" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/FronEnd/ngroks/ngrok.exe" beforeDir="false" afterPath="$PROJECT_DIR$/FronEnd/ngroks/ngrok.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skill.py" beforeDir="false" afterPath="$PROJECT_DIR$/Skill.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeMo.py" beforeDir="false" afterPath="$PROJECT_DIR$/WeMo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Skill.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+            <state relative-caret-position="24">
+              <caret line="30" selection-start-line="30" selection-end-line="31" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -27,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WeMo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="420" column="48" lean-forward="true" selection-start-line="420" selection-start-column="48" selection-end-line="420" selection-end-column="48" />
+            <state relative-caret-position="9480">
+              <caret line="407" column="48" selection-start-line="407" selection-start-column="48" selection-end-line="407" selection-end-column="48" />
               <folding>
                 <element signature="e#1174#1192#0" expanded="true" />
               </folding>
@@ -54,8 +56,8 @@
       <list>
         <option value="$PROJECT_DIR$/life360App.py" />
         <option value="$PROJECT_DIR$/Test.py" />
-        <option value="$PROJECT_DIR$/Skill.py" />
         <option value="$PROJECT_DIR$/WeMo.py" />
+        <option value="$PROJECT_DIR$/Skill.py" />
       </list>
     </option>
   </component>
@@ -70,8 +72,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="54" />
-    <option name="y" value="97" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -81,6 +83,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,10 +95,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Test.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -130,7 +133,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WeMo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Skill.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -195,9 +198,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.60208064" visible="true" weight="0.13113007" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.60208064" visible="true" weight="0.13219616" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -208,13 +211,13 @@
       <window_info anchor="bottom" id="SonarLint" order="6" weight="0.15376227" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.20392585" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="9" visible="true" weight="0.22246456" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="9" visible="true" weight="0.28462377" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4940022" weight="0.11123228" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="TODO" order="3" sideWeight="0.44319776" visible="true" weight="0.13646056" />
-      <window_info anchor="right" id="Structure" order="4" sideWeight="0.5568023" side_tool="true" visible="true" weight="0.13646056" />
+      <window_info anchor="right" id="TODO" order="3" sideWeight="0.44207317" visible="true" weight="0.13646056" />
+      <window_info anchor="right" id="Structure" order="4" sideWeight="0.55792683" side_tool="true" visible="true" weight="0.13646056" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -256,16 +259,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WeMo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="420" column="48" lean-forward="true" selection-start-line="420" selection-start-column="48" selection-end-line="420" selection-end-column="48" />
-          <folding>
-            <element signature="e#1174#1192#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/life360.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -275,10 +268,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WeMo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9480">
+          <caret line="407" column="48" selection-start-line="407" selection-start-column="48" selection-end-line="407" selection-end-column="48" />
+          <folding>
+            <element signature="e#1174#1192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="1996" column="53" lean-forward="true" selection-start-line="1996" selection-start-column="53" selection-end-line="1996" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Skill.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+        <state relative-caret-position="24">
+          <caret line="30" selection-start-line="30" selection-end-line="31" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

@@ -20,10 +20,10 @@ import modules.ReverseGeoCoder as RGC
 #Type 0 -> LED
 #Type 1 -> Curtains,...
 #Type 2 ->
-
+'''
 with open('Config.txt', 'r') as f:
     Devices = ast.literal_eval(f.read())
-
+'''
 apodos={
 "Fernando":["fair","ferny"],
 "Efebeac":["dad","fernando","efebeac"],

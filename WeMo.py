@@ -38,7 +38,7 @@ import uuid
 from gpiozero import LED
 from gpiozero.pins.pigpio import PiGPIOFactory
 #import ast
-import numpy
+
 # This XML is the minimum needed to define one of our virtual switches
 # to the Amazon Echo
 
@@ -61,7 +61,7 @@ DEBUG = False
 def dbg(msg):
     global DEBUG
     if DEBUG:
-        print (msg)
+        print msg
         sys.stdout.flush()
 
 
@@ -301,24 +301,19 @@ class upnp_broadcast_responder(object):
 
             try:
                 self.ssock.bind(('',self.port))
-            except Exception as e:
+            except Exception, e:
                 dbg("WARNING: Failed to bind %s:%d: %s" , (self.ip,self.port,e))
                 ok = False
 
             try:
                 self.ssock.setsockopt(socket.IPPROTO_IP,socket.IP_ADD_MEMBERSHIP,self.mreq)
-            except Exception as e:
+            except Exception, e:
                 dbg('WARNING: Failed to join multicast group:',e)
                 ok = False
 
-        except Exception as e:
+        except Exception, e:
             dbg("Failed to initialize UPnP sockets:",e)
             return False
-        '''
-               except Exception, e:
-                       dbg(e)
-                       break
-        '''
         if ok:
             dbg("Listening for UPnP broadcasts")
 
@@ -349,14 +344,9 @@ class upnp_broadcast_responder(object):
                 return self.ssock.recvfrom(size)
             else:
                 return False, False
-        except Exception as e:
+        except Exception, e:
             dbg(e)
             return False, False
-        '''
-               except Exception, e:
-                       dbg(e)
-                       break
-        '''
 
     def add_device(self, device):
         self.devices.append(device)
@@ -409,19 +399,15 @@ class gpio_handler(object):
 # NOTE: As of 2015-08-17, the Echo appears to have a hard-coded limit of
 # 16 switches it can control. Only the first 16 elements of the FAUXMOS
 # list will be used.
+'''with open('Config.txt', 'r') as f:
+    FAUXMOS = ast.literal_eval(f.read())'''
 
-# TODO
-'''
-- Añadir dispositivos en Array [NOMBRE,gpio_handler(pin,ip)]
-- Guardar dispositivos en algun lado
-'''
 FAUXMOS = [
-    ['Green LED', gpio_handler(4,"192.168.1.59")],
-    ['Yellow LED',gpio_handler(17,"192.168.1.39")],
-    ['Blue LED',gpio_handler(17,"192.168.1.39")]
-    
+    ['Green LED', gpio_handler(4,"192.168.1.153")],
+    ['Yellow LED', gpio_handler(17,"192.168.1.153")],
+    ['Relay 2', gpio_handler(27,"192.168.1.153")],
+    ['Relay 1', gpio_handler(22,"192.168.1.153")],
 ]
-
 
 
 if len(sys.argv) > 1 and sys.argv[1] == '-d':
@@ -452,12 +438,6 @@ while True:
         # Allow time for a ctrl-c to stop the process
         p.poll(100)
         time.sleep(0.1)
-
-    except Exception as e:
+    except Exception, e:
         dbg(e)
         break
-        """
-               except Exception, e:
-                       dbg(e)
-                       break
-        """

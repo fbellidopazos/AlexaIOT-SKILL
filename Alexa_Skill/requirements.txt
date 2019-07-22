@@ -1,0 +1,7 @@
+Flask
+Flask-ask
+cryptography
+geopy
+gpiozero
+pigpio
+requests
