@@ -1,91 +1,90 @@
-from flask import Flask, render_template
-from flask_ask import Ask, statement, question, session
+# IMPORTS
+# =============================================================================================================================
+from flask import Flask, render_template                
+from flask_ask import Ask, statement, question, session     
 import random
-import logging
-import os
-import ast
-import time
-import life360App
-import modules.ReverseGeoCoder as RGC
+import life360App as lf
+import ReverseGeoCoder as RGC
+import json
+from gpio_handler import gpio_handler
 
-#Notes:
-#=========================
-#Hace acciones No imprime por pantalla
-#Hacer Raspberry Pi
-#
-#
 
-#Raspberry GPIO
-#===================
-#Type 0 -> LED
-#Type 1 -> Curtains,...
-#Type 2 ->
+# GLOBAL VARIABLES
+# =============================================================================================================================
+app = Flask(__name__)                    #Initializing the app
+ask = Ask(app, '/Tester_JSON.py')                     #Initializing Alexa functionality around app
+
+
+with open('config.json', 'r') as f:
+    config = json.load(f)
+
+apodos = config['SKILL']['APODOS']
 '''
-with open('Config.txt', 'r') as f:
-    Devices = ast.literal_eval(f.read())
+devices={}
+for i in config["WEMO"]:
+    devices[i] = gpio_handler(int(config["WEMO"][i]["PIN"]), str(config["WEMO"][i]["IP"]))
 '''
-apodos={
-"Fernando":["fair","ferny"],
-"Efebeac":["dad","fernando","efebeac"],
-"Maria":["mom","maria","maria"],
-"IgnacioBP":["nene","ignacioBP"]
-}
-
-
-app=Flask(__name__)
-ask = Ask(app,'/test')
-logging.getLogger("flask_ask").setLevel(logging.DEBUG)
-
-'''
-Mandatory Section:
-=====================================================================================
-1.-Opening
-2.-Help
-'''
-#Opening
+# MAIN INTENT
+# =============================================================================================================================
 @ask.launch
 def launcher():
     hellos=["Hi there","Howdy","May the force be with you","Greetings","Hello World!"]
-    msg=random.choice(hellos)+"......................What would you like to do?"+render_template("help")
+    msg=random.choice(hellos)
     return question(msg)
 
-
-
+    
 @ask.intent('AMAZON.HelpIntent')
 def help():
     return question(render_template("help"))
 
 
-
-
-
-'''
-Intents:
-=====================================================================================
-1.-Hellos
-2.-life360
-3.-Turn On/Off---Not Done
-'''
+@ask.intent('AMAZON.FallbackIntent')
+def fallback():
+    return statement(render_template("fallback"))   
+    
+# SKILL INTENT
+# =============================================================================================================================
+# Hello
 @ask.intent('HelloIntent')
 def hello():
     hellos=["Hi there","Howdy","May the force be with you","Greetings","Hello World!"]
     return statement(random.choice(hellos))
 
-#life360 Family Location
+# life360 Family Location
 @ask.intent('LocateIntent')
-def life360(Shortname):
-    dict=life360App.locate()
+def life360(shortname):
+    location_dictionary=lf.locate()
     info=["Null","Someone not in the database","Null","-100%","Null"]
-#Find if a shortname is in the name then gets the key to which it takes the data and stores it in Info
     for i in apodos:
-        if(Shortname.lower() in apodos[i]):
-            info = dict[i]
+        if(shortname.lower() in apodos[i]):
+            info=location_dictionary[str(i)]
             break
-    return statement(Shortname+" is at "+ info[0] if info[0]!="" else RGC.reverseGEO(info[1],info[2]) +" With a battery of " + info[3])
+    
+    place=info[0] if info[0]!="" else RGC(info[1],info[2])
+
+    return statement(f"{shortname} is at {place} with a battery of {info[3]}")
+    # return statement(shortname+" is at "+ place +" With a battery of " + info[3])
 
 
-'''MANDATORY'''
+@ask.intent('OnIntent')
+def turn_on(device_name):
+    if device_name.upper() in devices:
+        devices[device_name.upper()].on()
+        return statement(f"{device_name} is ON")
+    else:
+        return statement(f"{device_name} Not available or configured")
+
+
+@ask.intent('OffIntent')
+def turn_off(device_name):
+    if device_name.upper() in devices:
+        devices[device_name].off()
+        return statement(f"{device_name} is OFF")
+    else:
+        return statement(f"{device_name} Not available or configured")
+    
+
+# RUN
+# =============================================================================================================================
 if __name__ == '__main__':
-    #os.system("gnome-terminal -x python AlexaIOT0.py")
-    #os.system("python AlexaIOT0.py")
     app.run(debug=True)

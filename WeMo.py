@@ -33,11 +33,13 @@ import socket
 import struct
 import sys
 import time
-import urllib
 import uuid
 from gpiozero import LED
 from gpiozero.pins.pigpio import PiGPIOFactory
-#import ast
+import json
+from gpio_handler import gpio_handler
+with open('config.json', 'r') as f:
+    config = json.load(f)
 
 # This XML is the minimum needed to define one of our virtual switches
 # to the Amazon Echo
@@ -373,22 +375,7 @@ class rest_api_handler(object):
         r = requests.get(self.off_cmd)
         return r.status_code == 200
 
-class gpio_handler(object):
-    def __init__(self, pin_number,ip):
 
-        self.pin=int(pin_number)
-        self.factory=PiGPIOFactory(host=str(ip))
-        self.led=LED(int(pin_number), pin_factory=self.factory)
-
-    def on(self):
-        (self.led).on()
-        print(str(self.pin)+" IS ON")
-        return True
-
-    def off(self):
-        (self.led).off()
-        print(str(self.pin)+" IS OFF")
-        return True
 
 # Each entry is a list with the following elements:
 #
@@ -399,15 +386,22 @@ class gpio_handler(object):
 # NOTE: As of 2015-08-17, the Echo appears to have a hard-coded limit of
 # 16 switches it can control. Only the first 16 elements of the FAUXMOS
 # list will be used.
-'''with open('Config.txt', 'r') as f:
-    FAUXMOS = ast.literal_eval(f.read())'''
+
+'''
+SE AñADIO CONFIG
+SE ELIMINO GPIO_HANDLER en caso de no funcionar añadirlo de vuelta
+'''
 
 FAUXMOS = [
-    ['Green LED', gpio_handler(4,"192.168.1.153")],
-    ['Yellow LED', gpio_handler(17,"192.168.1.153")],
-    ['Relay 2', gpio_handler(27,"192.168.1.153")],
-    ['Relay 1', gpio_handler(22,"192.168.1.153")],
+
 ]
+
+for i in config["WEMO"]:
+    FAUXMOS.append([str(i),gpio_handler(int(config["WEMO"][i]["PIN"]),str(config["WEMO"][i]["IP"]))])
+
+
+
+
 
 
 if len(sys.argv) > 1 and sys.argv[1] == '-d':

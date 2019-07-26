@@ -1,6 +1,8 @@
 from life360 import life360
-import datetime
-import ast
+import json
+
+with open('config.json', 'r') as f:
+    config = json.load(f)
 
 def xstr(s):
     if s is None:
@@ -11,14 +13,14 @@ def locate():
 
     # basic authorization hash (base64 if you want to decode it and see the sekrets)
     # this is a googleable or sniffable value. i imagine life360 changes this sometimes.
-    authorization_token = "cFJFcXVnYWJSZXRyZTRFc3RldGhlcnVmcmVQdW1hbUV4dWNyRUh1YzptM2ZydXBSZXRSZXN3ZXJFQ2hBUHJFOTZxYWtFZHI0Vg=="
+    authorization_token = config["LIFE360"]["TOKEN"]
 
     # your username and password (hope they are secure!)
-    username = ""
-    password = ""
+    username = config["LIFE360"]["USER"]
+    password = config["LIFE360"]["PASS"]
 
     #instantiate the API
-    api = life360(authorization_token="cFJFcXVnYWJSZXRyZTRFc3RldGhlcnVmcmVQdW1hbUV4dWNyRUh1YzptM2ZydXBSZXRSZXN3ZXJFQ2hBUHJFOTZxYWtFZHI0Vg==", username="", password="")
+    api = life360(authorization_token=authorization_token, username=username, password=password)
     if api.authenticate():
         Data={}
 
@@ -40,7 +42,4 @@ def locate():
 
     else:
         Data="None"
-    '''f = open("locationInfo.txt","w")
-    f.write( str(Data) )
-    f.close()'''
     return(Data)
